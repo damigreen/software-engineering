@@ -1,0 +1,37 @@
+@layout('main')
+
+@section('content')
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        @each(head in tableHead)
+          <th>
+            <div class="header-wrap">
+                <span>{{ head.value }}</span>
+              </div>
+            </th>
+          @endeach
+      </tr>
+    </thead>
+    <tbody>
+      @each(customer in customers)
+        <tr class="table-data">
+          <td><a href='/customers/{{customer.id}}'> {{ customer.fullName }}</a></td>
+          <td>{{ customer.phoneNumber }}</td>
+          <td>{{ customer.email }}</td>
+          <td>
+            <select name="type" value={{ customer.type }}>
+              <option value="Prospect">Prospect</option>
+              <option value="Customer">Customer</option>
+              {{--  <option value="Customer" selected={{ custumer.userType }}>Customer</option>  --}}
+            </select>
+          </td>
+        </tr>
+      @endeach
+    </tbody>
+  </table>  
+</div>
+
+@endsection

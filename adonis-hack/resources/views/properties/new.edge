@@ -1,0 +1,40 @@
+@layout('main')
+
+@section('content')
+
+  <a href='/properties'>Go Back</a>
+  <hr>
+  <h1>New Property</h1>
+  <form action="/properties" method="POST">
+    {{ csrfField() }}
+    <div class="form-group">
+      <label>Name</label>
+      <input name="propertyName" class="form-control" placeholder="Property Name" value="{{ old('name', '') }}"></input>
+      {{ elIf('<span class="text-danger">$self</span>', getErrorFor('name'), hasErrorFor('name')) }}
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Value</label>
+      <input name="value" class="form-control" placeholder="Value" value="{{ old('value', '') }}">
+      {{ elIf('<span class="text-danger">$self</span>', getErrorFor('value'), hasErrorFor('value')) }}
+    </div>
+    <div class="form-group">
+      <label>Tenants</label>
+      <input name="tenants" class="form-control" placeholder="Tenants" value="{{ old('tenants', '') }}">
+      {{ elIf('<span class="text-danger">$self</span>', getErrorFor('tenants'), hasErrorFor('tenants')) }}
+    </div>
+    <div class="form-group">
+      <label>Rent</label>
+      <input name="rent" class="form-control" placeholder="Rent" value="{{ old('rent', '') }}">
+      {{ elIf('<span class="text-danger">$self</span>', getErrorFor('rent'), hasErrorFor('rent')) }}
+    </div>
+    <div class="form-group">
+      <label>Image</label>
+      <input name="image" class="form-control" placeholder="Image" />
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+@endsection

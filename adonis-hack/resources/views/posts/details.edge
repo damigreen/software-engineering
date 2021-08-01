@@ -1,0 +1,22 @@
+@layout('main')
+
+@section('content')
+
+  <a href='/posts'>Go Back</a>
+  <hr>
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.body }}</p>
+
+  <hr>
+
+  <div class="d-flex w-100">
+    <a href="/posts/edit/{{ post.id }}" class="btn d-block btn-dark float-left">Edit</a>
+  
+    <form action='{{ '/posts/' + post.id + '?_method=DELETE' }}' method="POST">
+      {{ csrfField() }}
+      <button type="submit" class="btn btn-danger d-block float-right">Delete</button>
+    </form>
+
+  </div>
+
+@endsection

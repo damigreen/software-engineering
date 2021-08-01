@@ -1,0 +1,14 @@
+@layout('main')
+
+@section('content')
+
+  <a href="/customers">Go Back</a>
+  <div>
+    <div>{{ customer.fullName }}</div>
+    <div>{{ customer.phoneNumber }}</div>
+    <div>{{ customer.email }}</div>
+    <div>{{ customer.type }}</div>
+    <div>{{ customer.created_at }}</div>
+  </div>
+
+@endsection
