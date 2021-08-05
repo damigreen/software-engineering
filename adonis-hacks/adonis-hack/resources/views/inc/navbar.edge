@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-secondary navbar-dark navbar-right mb-3">
+  <div class="container">
+    <a href="/" class="navbar-brand" style="color: gold;">AVIOS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="/properties" class="nav-link">Properties</a>
+        </li>
+        <li class="nav-item">
+          <a href="/properties/new" class="nav-link">Add Properties</a>
+        </li>
+        <li style='margin-left: 30px float-right ' class=" nav-item d-flex flex-row">
+          @loggedIn
+            <div style='color:#ffffff' class="nav-link">{{ auth.user.username }} loggedIn</div>
+            <a href="/logout" class="btn btn-danger nav-link " style='color:#ffffff'>Logout</a>
+          @else
+            <a href="/login" class="nav-link" style='color:#ffffff'>Login</a>
+            <a href="/register" class="nav-link">Register</a>
+          @endloggedIn
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
