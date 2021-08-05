@@ -1,0 +1,34 @@
+@layout('main')
+
+@section('content')
+
+  <a href='/posts'>Go Back</a>
+  <hr>
+  <h1>Add Customers</h1>
+  <form action="/post" method="POST">
+    {{ csrfField() }}
+    <div class="form-group">
+      <label>Fullname</label>
+      <input name="fullname" class="form-control" placeholder="Fullname"></input>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <textarea name="phone" class="form-control" placeholder="Phone Number"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Email Address</label>
+      <textarea name="email" class="form-control" placeholder="Email"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+      <label>Customer Type</label>
+      <textarea name="type" class="form-control" placeholder="Type"></textarea>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+@endsection
