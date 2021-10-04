@@ -1,4 +1,7 @@
-vue-hacks/proplab-hack
-laravel-hack/posty/node_modules
-vue-hacks/nuxt-hack/node_modules
-node-hacks/node_modules
+vue/proplab-hack
+laravel/posty/node_modules
+vue/nuxt-hack/node_modules
+node/node_modules
+node-docs/node_modules
+node-docs/greenmtech-chatbot/node_modules
+node_modules
