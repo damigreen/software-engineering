@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "koa": "^2.13.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  }
+}

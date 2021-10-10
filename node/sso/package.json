@@ -1,0 +1,18 @@
+{
+  "name": "sso",
+  "version": "1.0.0",
+  "description": "Single Sign On Implementation",
+  "main": "index.js",
+  "repository": "https://github.com/damigreen",
+  "author": "Damilola Faseun",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.0.0",
+    "nodemon": "^2.0.13"
+  },
+  "type": "commonjs"
+}

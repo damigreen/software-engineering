@@ -1,0 +1,18 @@
+{
+  "name": "web-scrapper-with-nodejs-puppeteer",
+  "version": "1.0.0",
+  "url": "https://learnscraping.com/nodejs-web-scraping-with-puppeteer/",
+  "description": "Web scrapping with node js and puppeteer",
+  "main": "index.js",
+  "repository": "https://github.com/damigreen",
+  "author": "Damilola Faseun",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.13",
+    "puppeteer": "^10.4.0"
+  }
+}
