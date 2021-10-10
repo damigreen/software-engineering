@@ -1,0 +1,30 @@
+@layout('main')
+
+@section('content')
+  <div>
+    <div>
+      <h2>Reset Password</h2>
+
+      @include('inc.notification')
+      <form action="/password/email" method="post">
+        {{ csrfField() }}
+
+        
+        <div class="form-group">
+          <label>Email</label>
+          <input 
+            name="email"
+            class="form-control {{ hasErrorFor('email') ? 'text-danger' : ''}}"
+            value="{{ old('email', '') }}"
+            placeholder="Email Address"
+          />
+          {{ elIf('<span class="text-danger">$self</span>', getErrorFor('email'), hasErrorFor('email')) }}
+        </div>
+        <button class="btn btn-dark text-center mt-4"type="submit" class="btn btn-primary">Send password reset link</button>
+      </form>
+    <div>
+
+  </div>
+
+
+@endsection

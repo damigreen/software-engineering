@@ -1,0 +1,6 @@
+@if(flashMessage('notification'))
+  <div class="alert alert-{{ flashMessage('notification.type') }}">
+    {{ flashMessage('notification.message') }}
+    {{--  {{ old('notification.message')}}  --}}
+  </div>
+@endif
